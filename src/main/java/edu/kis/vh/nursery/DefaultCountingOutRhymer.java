@@ -6,26 +6,26 @@ public class DefaultCountingOutRhymer {
 
     private int totalCount = -1;
 
-    public void countIn(int in) {
+    protected void countIn(int in) {
         if (!isFull())
             numbers[++totalCount] = in;
     }
 
-    public boolean callCheck() {
+    protected boolean callCheck() {
         return totalCount == -1;
     }
 
-    public boolean isFull() {
+    private boolean isFull() {
         return totalCount == 11;
     }
 
-    protected int getTopValue() {
+    protected int peekaboo() {
         if (callCheck())
             return -1;
         return numbers[totalCount];
     }
 
-    public int countOut() {
+    protected int countOut() {
         if (callCheck())
             return -1;
         return numbers[totalCount--];
