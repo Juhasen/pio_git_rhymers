@@ -32,7 +32,7 @@ public class DefaultCountingOutRhymer {
     protected int countOut() {
         if (callCheck())
             return -1;
-        return numbers[totalCount--];
+        return numbers[total--];
     }
 
 }
