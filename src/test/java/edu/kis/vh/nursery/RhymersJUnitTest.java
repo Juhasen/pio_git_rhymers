@@ -19,7 +19,7 @@ public class RhymersJUnitTest {
     public void testCallCheck() {
         DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
         boolean result = rhymer.callCheck();
-        Assert.assertEquals(true, result);
+        Assert.assertTrue(result);
 
         rhymer.countIn(888);
 
